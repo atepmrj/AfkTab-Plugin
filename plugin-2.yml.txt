@@ -1,0 +1,24 @@
+name: AfkTab
+version: '1.0.0'
+main: dev.afktab.AfkTabPlugin
+api-version: '1.21'
+description: Помечает AFK игроков и ботов в табе и показывает реальный онлайн
+commands:
+  afk:
+    description: Включить или выключить режим AFK вручную
+    usage: /afk
+    permission: afktab.use
+  afktab:
+    description: Управление плагином AfkTab
+    usage: /afktab reload
+    permission: afktab.admin
+permissions:
+  afktab.use:
+    description: Команда /afk
+    default: true
+  afktab.admin:
+    description: Команда /afktab reload
+    default: op
+  afktab.exempt:
+    description: Игрок никогда не помечается AFK автоматически
+    default: false
